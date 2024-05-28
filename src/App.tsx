@@ -1,5 +1,11 @@
+import SelemeniSection from './design-sections/SelemeniSection'
+
 function App() {
-  return <>test</>
+  return (
+    <>
+      <SelemeniSection />
+    </>
+  )
 }
 
 export default App

@@ -2,7 +2,11 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'selemeni-section': "url('./src/assets/images/bg1.jpg')",
+      },
+    },
   },
   plugins: [],
 }
