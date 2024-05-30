@@ -18,23 +18,48 @@ export default function Parallax() {
   })
 
   const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4])
+  const scale5 = useTransform(scrollYProgress, [0, 1], [1, 5])
+  const scale7 = useTransform(scrollYProgress, [0, 1], [1, 7])
+  const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9])
+
+  const pictures = [
+    {
+      src: img1,
+      scale: scale4,
+    },
+    {
+      src: img2,
+      scale: scale5,
+    },
+    {
+      src: img3,
+      scale: scale7,
+    },
+    {
+      src: img4,
+      scale: scale9,
+    },
+    {
+      src: img5,
+      scale: scale5,
+    },
+  ]
 
   return (
     <>
-      <div className="h-[50vh]"></div>
+      <div className='h-[50vh]'></div>
       <div className={classnames.container} ref={container}>
         <div className={classnames.sticky}>
-          <div className={classnames.el}>
-            <motion.div
-              style={{ scale: scale4 }}
-              className={classnames.imgContainer}
-            >
-              <img src={img1} className="w-full h-full object-cover" />
+          {pictures.map(({ src, scale }, i) => (
+            <motion.div style={{ scale }} key={i} className={classnames.el}>
+              <div className={classnames.imgContainer}>
+                <img src={src} className='w-full h-full object-cover' />
+              </div>
             </motion.div>
-          </div>
+          ))}
         </div>
       </div>
-      <div className="h-[50vh]"></div>
+      <div className='h-[50vh]'></div>
     </>
   )
 }
