@@ -1,9 +1,9 @@
-import Parallax from './design-sections/parallax'
+import Example from './components/FramerMotion/Example'
+import Pagination from './components/pagination/Pagination'
 
 function App() {
   return (
     <>
-      <Parallax />
       {/* <SelemeniSection />
       <div className="h-screen" style={{ backgroundColor: '#151519' }}>
         <header className="py-40 flex flex-col w-full text-center">
@@ -15,6 +15,7 @@ function App() {
           </p>
         </header>
       </div> */}
+      <Pagination />
     </>
   )
 }
